@@ -1,4 +1,3 @@
-import React from 'react';
 import { ResumeData } from '@/types/resume';
 import { pdf } from '@react-pdf/renderer';
 import { saveAs } from 'file-saver';
