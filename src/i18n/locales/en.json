@@ -1,0 +1,153 @@
+{
+  "app": {
+    "title": "Resume Builder",
+    "description": "Create professional resumes easily"
+  },
+  "nav": {
+    "home": "Home",
+    "templates": "Templates",
+    "about": "About"
+  },
+  "form": {
+    "personalInfo": "Personal Information",
+    "name": "Full Name",
+    "email": "Email",
+    "phone": "Phone Number",
+    "jobTitle": "Current Job Title",
+    "address": "Address",
+    "summary": "Professional Summary",
+    "experience": "Work Experience",
+    "education": "Education",
+    "skills": "Skills",
+    "languages": "Languages",
+    "social": "Social Media",
+    "addExperience": "Add Experience",
+    "addEducation": "Add Education",
+    "addSkill": "Add Skill",
+    "addLanguage": "Add Language",
+    "addSocial": "Add Social Media",
+    "company": "Company",
+    "position": "Position",
+    "startDate": "Start Date",
+    "endDate": "End Date",
+    "present": "Present",
+    "description": "Description",
+    "institution": "Institution",
+    "degree": "Degree",
+    "field": "Field of Study",
+    "skillName": "Skill Name",
+    "skillLevel": "Skill Level",
+    "language": "Language",
+    "proficiency": "Proficiency",
+    "platform": "Platform",
+    "url": "URL",
+    "save": "Save",
+    "cancel": "Cancel",
+    "previous": "Previous",
+    "next": "Next",
+    "personal": "Personal",
+    "template": "Template",
+    "beginner": "Beginner",
+    "intermediate": "Intermediate",
+    "expert": "Expert",
+    "noSkills": "No skills added yet. Add a skill to get started.",
+    "noExperience": "No experience added yet. Add your work experience to get started.",
+    "noEducation": "No education added yet. Add your education to get started.",
+    "noLanguages": "No languages added yet. Add a language to get started.",
+    "noSocialMedia": "No social media added yet. Add your social media profiles to get started.",
+    "placeholders": {
+      "name": "Enter your full name",
+      "email": "Enter your email address",
+      "phone": "Enter your phone number",
+      "jobTitle": "Enter your current job title",
+      "address": "Enter your address",
+      "summary": "Write a brief professional summary",
+      "company": "Enter company name",
+      "position": "Enter your position",
+      "startDate": "Select start date",
+      "endDate": "Select end date",
+      "description": "Describe your responsibilities and achievements",
+      "institution": "Enter institution name",
+      "degree": "Enter degree",
+      "field": "Enter field of study",
+      "skillName": "Enter skill name",
+      "language": "Enter language name",
+      "platform": "Enter platform name (e.g., LinkedIn, GitHub)",
+      "url": "Enter URL"
+    }
+  },
+  "templates": {
+    "classic": "Classic",
+    "modern": "Modern",
+    "creative": "Creative",
+    "selectTemplate": "Select Template",
+    "classicDescription": "A traditional resume layout with a clean and professional look",
+    "modernDescription": "A contemporary design with a sleek and minimalist appearance",
+    "creativeDescription": "A unique and eye-catching design to showcase your creativity"
+  },
+  "actions": {
+    "download": "Download PDF",
+    "preview": "Preview",
+    "edit": "Edit",
+    "delete": "Delete",
+    "save": "Save",
+    "saved": "Saved",
+    "cancel": "Cancel"
+  },
+  "language": {
+    "english": "English",
+    "arabic": "Arabic"
+  },
+  "export": {
+    "downloadPdf": "Download PDF",
+    "downloadTooltip": "Export your resume as a PDF file",
+    "exporting": "Exporting...",
+    "success": "Export Successful",
+    "successMessage": "Your resume has been exported successfully",
+    "error": "Export Failed",
+    "errorMessage": "There was an error exporting your resume"
+  },
+  "theme": {
+    "toggle": "Toggle theme",
+    "changed": "Theme Changed",
+    "lightModeEnabled": "Light mode enabled",
+    "darkModeEnabled": "Dark mode enabled"
+  },
+  "preview": {
+    "title": "Resume Preview",
+    "incomplete": "Complete the required fields",
+    "fillRequired": "Please fill in at least your name and job title to see the preview"
+  },
+  "proficiencyLevels": {
+    "beginner": "Beginner",
+    "elementary": "Elementary",
+    "intermediate": "Intermediate",
+    "advanced": "Advanced",
+    "fluent": "Fluent",
+    "native": "Native"
+  },
+  "pdf": {
+    "generatedWith": "Generated with",
+    "scanForContact": "Scan to save contact",
+    "contactInfo": "Contact Information"
+  },
+  "qrCode": {
+    "title": "QR Code Link",
+    "add": "Add QR Code",
+    "link": "Link for QR Code",
+    "linkPlaceholder": "Enter a URL (e.g., your portfolio, LinkedIn profile)",
+    "description": "This link will be converted to a QR code on your resume. Anyone scanning it will be directed to this URL.",
+    "willBeDisplayed": "This QR code will be displayed on your resume",
+    "noLink": "No QR code link added yet. Add a link to display a QR code on your resume.",
+    "linkSaved": "QR code link saved successfully",
+    "titleLabel": "QR Code Title",
+    "titlePlaceholder": "Enter a title for your QR code (e.g., My Portfolio, LinkedIn Profile)",
+    "titleDescription": "This title will be displayed with the QR code to indicate what it links to.",
+    "defaultTitle": "Scan Me"
+  },
+  "errors": {
+    "invalidUrl": "Invalid URL",
+    "pleaseEnterValidUrl": "Please enter a valid URL",
+    "selectDate": "Select a date"
+  }
+} 

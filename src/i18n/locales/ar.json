@@ -1,0 +1,153 @@
+{
+  "app": {
+    "title": "منشئ السيرة الذاتية",
+    "description": "إنشاء سير ذاتية احترافية بسهولة"
+  },
+  "nav": {
+    "home": "الرئيسية",
+    "templates": "القوالب",
+    "about": "حول"
+  },
+  "form": {
+    "personalInfo": "المعلومات الشخصية",
+    "name": "الاسم الكامل",
+    "email": "البريد الإلكتروني",
+    "phone": "رقم الهاتف",
+    "jobTitle": "المسمى الوظيفي الحالي",
+    "address": "العنوان",
+    "summary": "الملخص المهني",
+    "experience": "الخبرة العملية",
+    "education": "التعليم",
+    "skills": "المهارات",
+    "languages": "اللغات",
+    "social": "وسائل التواصل الاجتماعي",
+    "addExperience": "إضافة خبرة",
+    "addEducation": "إضافة تعليم",
+    "addSkill": "إضافة مهارة",
+    "addLanguage": "إضافة لغة",
+    "addSocial": "إضافة وسيلة تواصل اجتماعي",
+    "company": "الشركة",
+    "position": "المنصب",
+    "startDate": "تاريخ البدء",
+    "endDate": "تاريخ الانتهاء",
+    "present": "حتى الآن",
+    "description": "الوصف",
+    "institution": "المؤسسة التعليمية",
+    "degree": "الدرجة العلمية",
+    "field": "مجال الدراسة",
+    "skillName": "اسم المهارة",
+    "skillLevel": "مستوى المهارة",
+    "language": "اللغة",
+    "proficiency": "مستوى الإتقان",
+    "platform": "المنصة",
+    "url": "الرابط",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "previous": "السابق",
+    "next": "التالي",
+    "personal": "شخصي",
+    "template": "قالب",
+    "beginner": "مبتدئ",
+    "intermediate": "متوسط",
+    "expert": "خبير",
+    "noSkills": "لم تتم إضافة مهارات بعد. أضف مهارة للبدء.",
+    "noExperience": "لم تتم إضافة خبرات عملية بعد. أضف خبرتك العملية للبدء.",
+    "noEducation": "لم تتم إضافة تعليم بعد. أضف تعليمك للبدء.",
+    "noLanguages": "لم تتم إضافة لغات بعد. أضف لغة للبدء.",
+    "noSocialMedia": "لم تتم إضافة وسائل تواصل اجتماعي بعد. أضف حساباتك للبدء.",
+    "placeholders": {
+      "name": "أدخل اسمك الكامل",
+      "email": "أدخل بريدك الإلكتروني",
+      "phone": "أدخل رقم هاتفك",
+      "jobTitle": "أدخل مسماك الوظيفي الحالي",
+      "address": "أدخل عنوانك",
+      "summary": "اكتب ملخصًا مهنيًا موجزًا",
+      "company": "أدخل اسم الشركة",
+      "position": "أدخل منصبك",
+      "startDate": "اختر تاريخ البدء",
+      "endDate": "اختر تاريخ الانتهاء",
+      "description": "صف مسؤولياتك وإنجازاتك",
+      "institution": "أدخل اسم المؤسسة التعليمية",
+      "degree": "أدخل الدرجة العلمية",
+      "field": "أدخل مجال الدراسة",
+      "skillName": "أدخل اسم المهارة",
+      "language": "أدخل اسم اللغة",
+      "platform": "أدخل اسم المنصة (مثل لينكد إن، جيتهاب)",
+      "url": "أدخل الرابط"
+    }
+  },
+  "templates": {
+    "classic": "كلاسيكي",
+    "modern": "عصري",
+    "creative": "إبداعي",
+    "selectTemplate": "اختر قالب",
+    "classicDescription": "تصميم سيرة ذاتية تقليدي بمظهر نظيف واحترافي",
+    "modernDescription": "تصميم معاصر بمظهر أنيق وبسيط",
+    "creativeDescription": "تصميم فريد وجذاب لإظهار إبداعك"
+  },
+  "actions": {
+    "download": "تنزيل PDF",
+    "preview": "معاينة",
+    "edit": "تعديل",
+    "delete": "حذف",
+    "save": "حفظ",
+    "saved": "تم الحفظ",
+    "cancel": "إلغاء"
+  },
+  "language": {
+    "english": "الإنجليزية",
+    "arabic": "العربية"
+  },
+  "export": {
+    "downloadPdf": "تنزيل PDF",
+    "downloadTooltip": "تصدير السيرة الذاتية كملف PDF",
+    "exporting": "جاري التصدير...",
+    "success": "تم التصدير بنجاح",
+    "successMessage": "تم تصدير السيرة الذاتية بنجاح",
+    "error": "فشل التصدير",
+    "errorMessage": "حدث خطأ أثناء تصدير السيرة الذاتية"
+  },
+  "theme": {
+    "toggle": "تبديل السمة",
+    "changed": "تم تغيير السمة",
+    "lightModeEnabled": "تم تفعيل الوضع الفاتح",
+    "darkModeEnabled": "تم تفعيل الوضع الداكن"
+  },
+  "preview": {
+    "title": "معاينة السيرة الذاتية",
+    "incomplete": "أكمل الحقول المطلوبة",
+    "fillRequired": "يرجى ملء اسمك والمسمى الوظيفي على الأقل لرؤية المعاينة"
+  },
+  "proficiencyLevels": {
+    "beginner": "مبتدئ",
+    "elementary": "أساسي",
+    "intermediate": "متوسط",
+    "advanced": "متقدم",
+    "fluent": "طلاقة",
+    "native": "لغة أم"
+  },
+  "pdf": {
+    "generatedWith": "تم إنشاؤه بواسطة",
+    "scanForContact": "امسح ضوئيًا لحفظ جهة الاتصال",
+    "contactInfo": "معلومات الاتصال"
+  },
+  "qrCode": {
+    "title": "رابط رمز QR",
+    "add": "إضافة رمز QR",
+    "link": "رابط لرمز QR",
+    "linkPlaceholder": "أدخل رابطًا (مثل محفظة أعمالك، ملف لينكد إن)",
+    "description": "سيتم تحويل هذا الرابط إلى رمز QR في سيرتك الذاتية. أي شخص يقوم بمسح الرمز سيتم توجيهه إلى هذا الرابط.",
+    "willBeDisplayed": "سيتم عرض رمز QR هذا في سيرتك الذاتية",
+    "noLink": "لم تتم إضافة رابط رمز QR بعد. أضف رابطًا لعرض رمز QR في سيرتك الذاتية.",
+    "linkSaved": "تم حفظ رابط رمز QR بنجاح",
+    "titleLabel": "عنوان رمز QR",
+    "titlePlaceholder": "أدخل عنوانًا لرمز QR الخاص بك (مثل محفظة أعمالي، ملف لينكد إن)",
+    "titleDescription": "سيتم عرض هذا العنوان مع رمز QR للإشارة إلى ما يرتبط به.",
+    "defaultTitle": "امسحني"
+  },
+  "errors": {
+    "invalidUrl": "رابط غير صالح",
+    "pleaseEnterValidUrl": "يرجى إدخال رابط صالح",
+    "selectDate": "اختر تاريخًا"
+  }
+}
