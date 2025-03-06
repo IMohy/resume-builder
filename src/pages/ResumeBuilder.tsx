@@ -35,17 +35,17 @@ const ResumeBuilder: React.FC = () => {
           <div>
             <Card>
               <Tabs value={activeTab} onValueChange={setActiveTab}>
-                <TabsList className="grid grid-cols-3 md:grid-cols-7">
-                  <TabsTrigger value="personal" className="data-[state=active]:bg-primary/10">{t("form.personal")}</TabsTrigger>
-                  <TabsTrigger value="experience" className="data-[state=active]:bg-primary/10">{t("form.experience")}</TabsTrigger>
-                  <TabsTrigger value="education" className="data-[state=active]:bg-primary/10">{t("form.education")}</TabsTrigger>
-                  <TabsTrigger value="skills" className="data-[state=active]:bg-primary/10">{t("form.skills")}</TabsTrigger>
-                  <TabsTrigger value="languages" className="data-[state=active]:bg-primary/10">{t("form.languages")}</TabsTrigger>
-                  <TabsTrigger value="social" className="data-[state=active]:bg-primary/10">{t("form.social")}</TabsTrigger>
-                  <TabsTrigger value="template" className="data-[state=active]:bg-primary/10">{t("form.template")}</TabsTrigger>
+                <TabsList className="grid w-full grid-cols-3 h-full ">
+                  <TabsTrigger value="personal">{t("form.personal")}</TabsTrigger>
+                  <TabsTrigger value="experience">{t("form.experience")}</TabsTrigger>
+                  <TabsTrigger value="education">{t("form.education")}</TabsTrigger>
+                  <TabsTrigger value="skills">{t("form.skills")}</TabsTrigger>
+                  <TabsTrigger value="languages">{t("form.languages")}</TabsTrigger>
+                  <TabsTrigger value="social">{t("form.social")}</TabsTrigger>
+                  <TabsTrigger value="template">{t("form.template")}</TabsTrigger>
                 </TabsList>
 
-                <CardContent className="pt-6">
+                <CardContent>
                   <TabsContent value="personal">
                     <PersonalInfoForm />
                   </TabsContent>

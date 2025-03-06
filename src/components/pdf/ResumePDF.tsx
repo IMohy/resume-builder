@@ -1,5 +1,5 @@
 import React from "react";
-import { Document, Page, Text, View, StyleSheet } from "@react-pdf/renderer";
+import { Document, Page, Text, View, StyleSheet, Font } from "@react-pdf/renderer";
 import { ResumeData } from "@/types/resume";
 import i18next from "i18next";
 import PDFQRCode from "./PDFQRCode";
@@ -9,6 +9,17 @@ interface ResumePDFProps {
   data: ResumeData;
   isRTL: boolean;
 }
+
+// Register fonts using local files from the public directory
+Font.register({
+  family: "Roboto",
+  fonts: [
+    { src: "/fonts/Roboto-Regular.ttf", fontWeight: "normal" },
+    { src: "/fonts/Roboto-Bold.ttf", fontWeight: "bold" },
+    { src: "/fonts/Roboto-Italic.ttf", fontStyle: "italic" },
+    { src: "/fonts/Roboto-BoldItalic.ttf", fontWeight: "bold", fontStyle: "italic" },
+  ],
+});
 
 // Create styles
 const createStyles = (isRTL: boolean, template: "classic" | "modern" | "creative") => {
@@ -29,12 +40,13 @@ const createStyles = (isRTL: boolean, template: "classic" | "modern" | "creative
       flexDirection: "column",
       backgroundColor: "#ffffff",
       padding: 30,
-      fontFamily: "Helvetica",
+      fontFamily: "Roboto",
       fontSize: 10,
       color: "#333333",
     },
     section: {
       marginBottom: 10,
+      fontFamily: "Roboto",
     },
     divider: {
       borderBottomWidth: 1,
@@ -44,39 +56,54 @@ const createStyles = (isRTL: boolean, template: "classic" | "modern" | "creative
     header: {
       fontSize: 18,
       fontWeight: 700,
+      fontFamily: "Roboto",
+      marginBottom: 2,
+      color: primaryColor,
+      textAlign: isRTL ? "right" : "left",
+    },
+    name: {
+      fontSize: 20,
+      fontWeight: 700,
+      fontFamily: "Roboto",
       marginBottom: 2,
       color: primaryColor,
       textAlign: isRTL ? "right" : "left",
     },
     subheader: {
-      fontSize: 12,
+      fontSize: "1.25rem",
+      fontFamily: "Roboto",
+      color: "#4a5565",
       marginBottom: 8,
-      color: secondaryColor,
       textAlign: isRTL ? "right" : "left",
     },
     contactRow: {
       flexDirection: isRTL ? "row-reverse" : "row",
+      fontFamily: "Roboto",
       marginTop: 5,
       flexWrap: "wrap",
     },
     contactItem: {
       marginRight: isRTL ? 0 : 15,
       marginLeft: isRTL ? 15 : 0,
+      fontFamily: "Roboto",
       marginBottom: 3,
       flexDirection: isRTL ? "row-reverse" : "row",
       alignItems: "center",
     },
     contactLabel: {
-      fontWeight: "bold",
+      fontWeight: 700,
       fontSize: 9,
+      fontFamily: "Roboto",
+      marginRight: 3,
     },
     contactValue: {
       fontSize: 9,
-      marginLeft: 3,
+      fontFamily: "Roboto",
     },
     sectionHeader: {
-      fontSize: 12,
+      fontSize: 14,
       fontWeight: 700,
+      fontFamily: "Roboto",
       marginBottom: 6,
       color: primaryColor,
       borderBottomWidth: 1,
@@ -86,35 +113,40 @@ const createStyles = (isRTL: boolean, template: "classic" | "modern" | "creative
     },
     normalText: {
       fontSize: 9,
+      fontFamily: "Roboto",
       marginBottom: 3,
       textAlign: isRTL ? "right" : "left",
       lineHeight: 1.4,
     },
     itemRow: {
       flexDirection: isRTL ? "row-reverse" : "row",
+      fontFamily: "Roboto",
       justifyContent: "space-between",
       marginBottom: 2,
     },
     itemTitle: {
-      fontSize: 10,
-      fontWeight: "bold",
+      fontSize: 11,
+      fontWeight: 700,
+      fontFamily: "Roboto",
       color: secondaryColor,
     },
     itemSubtitle: {
-      fontSize: 9,
-      fontWeight: "bold",
+      fontSize: 10,
+      fontWeight: 700,
+      fontFamily: "Roboto",
       marginBottom: 2,
       textAlign: isRTL ? "right" : "left",
-      color: "#666666",
+      color: "#000000",
     },
     dateText: {
       fontSize: 9,
-      fontStyle: "italic",
-      color: "#99999980",
+      fontFamily: "Roboto",
+      color: "#000000",
     },
     twoColumnSection: {
       flexDirection: isRTL ? "row-reverse" : "row",
       justifyContent: "space-between",
+      fontFamily: "Roboto",
       marginTop: 5,
     },
     column: {
@@ -124,12 +156,16 @@ const createStyles = (isRTL: boolean, template: "classic" | "modern" | "creative
       flexDirection: isRTL ? "row-reverse" : "row",
       marginBottom: 2,
       alignItems: "center",
+      fontFamily: "Roboto",
     },
     bullet: {
       marginRight: isRTL ? 0 : 4,
       marginLeft: isRTL ? 4 : 0,
       fontSize: 10,
       alignSelf: "center",
+      fontFamily: "Roboto",
+      marginBottom: 3,
+      lineHeight: 1.4,
     },
     skillLevel: {
       flexDirection: "row",
@@ -138,6 +174,7 @@ const createStyles = (isRTL: boolean, template: "classic" | "modern" | "creative
     star: {
       fontSize: 9,
       color: primaryColor,
+      fontFamily: "Roboto",
     },
     footer: {
       marginTop: 20,
@@ -145,16 +182,21 @@ const createStyles = (isRTL: boolean, template: "classic" | "modern" | "creative
       borderTopColor: "#e5e5e5",
       paddingTop: 10,
       flexDirection: isRTL ? "row-reverse" : "row",
-      justifyContent: "space-between",
+      justifyContent: "center",
       alignItems: "center",
+      fontFamily: "Roboto",
     },
     footerText: {
       fontSize: 8,
       color: "#999999",
-      textAlign: isRTL ? "right" : "left",
+      textAlign: "center",
+      fontFamily: "Roboto",
     },
     qrCodeContainer: {
-      alignItems: isRTL ? "flex-start" : "flex-end",
+      alignItems: "center",
+      justifyContent: "center",
+      width: "100%",
+      fontFamily: "Roboto",
     },
   });
 };
@@ -180,21 +222,14 @@ const formatDate = (dateString: string) => {
 const ResumePDF: React.FC<ResumePDFProps> = ({ data, isRTL }) => {
   const styles = createStyles(isRTL, data.template);
 
-  // Helper function to render skill stars
-  const renderSkillStars = (level: number) => {
-    const stars = [];
-    for (let i = 0; i < 5; i++) {
-      stars.push(
-        <Text key={i} style={styles.star}>
-          {i < level ? "★" : "☆"}
-        </Text>
-      );
-    }
-    return stars;
-  };
+  // QR code title
+  const qrCodeTitle = "Portfolio";
 
   // Generate QR code value - use custom link if provided, otherwise use contact info
-  const qrCodeValue = data.personalInfo.qrLink || `BEGIN:VCARD
+  const qrCodeValue =
+    data.personalInfo.qrLink ||
+    data.socialMedia.find((s) => s.platform === "Portfolio")?.url ||
+    `BEGIN:VCARD
 VERSION:3.0
 N:${data.personalInfo.name}
 TEL:${data.personalInfo.phone}
@@ -202,17 +237,12 @@ EMAIL:${data.personalInfo.email}
 ADR:${data.personalInfo.address}
 END:VCARD`;
 
-  // QR code title - use custom title if provided, otherwise use default
-  const qrCodeTitle = data.personalInfo.qrLink 
-    ? (data.personalInfo.qrTitle || t('qrCode.defaultTitle'))
-    : t('pdf.scanForContact');
-
   return (
     <Document>
       <Page size="A4" style={styles.page}>
         {/* Header Section */}
         <View style={styles.section}>
-          <Text style={styles.header}>{data.personalInfo.name}</Text>
+          <Text style={styles.name}>{data.personalInfo.name}</Text>
           <Text style={styles.subheader}>{data.personalInfo.jobTitle}</Text>
 
           <View style={styles.contactRow}>
@@ -222,7 +252,7 @@ END:VCARD`;
             </View>
 
             <View style={styles.contactItem}>
-              <Text style={styles.contactLabel}>{t("form.phone")}:</Text>
+              <Text style={styles.contactLabel}>{t("form.phone")}</Text>
               <Text style={styles.contactValue}>{data.personalInfo.phone}</Text>
             </View>
 
@@ -252,13 +282,14 @@ END:VCARD`;
             data.experience.map((exp, index) => (
               <View key={exp.id} style={{ marginBottom: index < data.experience.length - 1 ? 8 : 0 }}>
                 <View style={styles.itemRow}>
-                  <Text style={styles.itemTitle}>{exp.position}</Text>
+                  <Text style={styles.itemTitle}>
+                    {exp.position} - {exp.company}
+                  </Text>
                   <Text style={styles.dateText}>
                     {formatDate(exp.startDate)} - {exp.isPresent ? t("form.present") : formatDate(exp.endDate)}
                   </Text>
                 </View>
-                <Text style={styles.itemSubtitle}>{exp.company}</Text>
-                <Text style={styles.normalText}>{exp.description}</Text>
+                <Text style={styles.normalText}>- {exp.description}</Text>
               </View>
             ))
           )}
@@ -279,8 +310,8 @@ END:VCARD`;
                     {formatDate(edu.startDate)} - {edu.isPresent ? t("form.present") : formatDate(edu.endDate)}
                   </Text>
                 </View>
-                <Text style={styles.itemSubtitle}>{edu.institution}</Text>
-                {edu.description && <Text style={styles.normalText}>{edu.description}</Text>}
+                <Text style={{ ...styles.itemTitle, fontWeight: 400 }}>{edu.institution}</Text>
+                {edu.description && <Text style={styles.normalText}>- {edu.description}</Text>}
               </View>
             ))
           )}
@@ -299,7 +330,6 @@ END:VCARD`;
                 <View key={skill.id} style={styles.listItem}>
                   <Text style={styles.bullet}>•</Text>
                   <Text style={styles.normalText}>{skill.name}</Text>
-                  <View style={styles.skillLevel}>{renderSkillStars(skill.level)}</View>
                 </View>
               ))
             )}
@@ -316,7 +346,7 @@ END:VCARD`;
                 <View key={lang.id} style={styles.listItem}>
                   <Text style={styles.bullet}>•</Text>
                   <Text style={styles.normalText}>
-                    {lang.name} ({t(`proficiencyLevels.${lang.proficiency}`)})
+                    {lang.name} ({lang.proficiency})
                   </Text>
                 </View>
               ))
@@ -341,11 +371,7 @@ END:VCARD`;
         )}
         <View style={styles.footer}>
           <View style={styles.qrCodeContainer}>
-            <PDFQRCode 
-              value={qrCodeValue}
-              size={80}
-              title={qrCodeTitle}
-            />
+            <PDFQRCode value={qrCodeValue} size={80} title={qrCodeTitle} />
           </View>
         </View>
       </Page>
